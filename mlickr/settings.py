@@ -99,6 +99,6 @@ LOGIN_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-MEDIA_ROOT = MEDIA_ROOT = '/home/kyaw/Documents/env/mlickr/media/' # its host dependable
+MEDIA_ROOT = '/home/kyaw/Documents/env/mlickr/media/' # its host dependable
 
 MEDIA_URL = 'http://127.0.0.1:8000/media/' 
