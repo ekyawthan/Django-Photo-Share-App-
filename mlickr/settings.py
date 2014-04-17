@@ -24,6 +24,12 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+TEMPLATE_DIRS = (
+    "./templates/",
+    "./templates/bootstrap3/",
+
+    )
+
 ALLOWED_HOSTS = []
 
 
@@ -36,6 +42,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'photo_sharing',
+    'registration',
+    'south',
+    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,3 +90,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+ACCOUNT_ACTIVATION_DAYS = 3
+LOGIN_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+MEDIA_ROOT = MEDIA_ROOT = '/home/kyaw/Documents/env/mlickr/media/' # its host dependable
+
+MEDIA_URL = 'http://127.0.0.1:8000/media/' 
